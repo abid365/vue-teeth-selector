@@ -6,73 +6,73 @@ Perfect for dental applications, medical software, EHR/EMR systems, clinical das
 
 ## Features
 
-✔ Select teeth by clicking  
-✔ Hover highlight & tooltip  
-✔ Supports controlled & uncontrolled states  
-✔ Callback gives selected map + popup position  
-✔ Works with any UI library  
-✔ No dependencies (only Vue 3)  
-✔ SVG-based, pixel-perfect diagram  
-✔ Customizable size & styling  
-✔ Lightweight and fast
+- ✔ **Click to select** teeth from an interactive diagram
+- ✔ **Hover highlight** with tooltip showing tooth number
+- ✔ **Controlled & uncontrolled** state support
+- ✔ **Callback** provides selection map + click position
+- ✔ **Framework-agnostic** styling works with any UI library
+- ✔ **Zero runtime dependencies** (only Vue 3 peer)
+- ✔ **SVG-based** for pixel-perfect rendering at any size
+- ✔ **Customizable** colors, dimensions, and styling
+- ✔ **Lightweight** ~22KB gzipped
 
 ## Installation
 
 ```bash
 npm install vue-teeth-selector
-or
+# or
 yarn add vue-teeth-selector
 ```
 
-## Quick Usage
+## Quick Start
 
-```bash
+```vue
 <script setup>
-import { ref } from 'vue'
-import { TeethDiagram } from 'vue-teeth-selector'
+import { ref } from "vue";
+import { TeethDiagram } from "vue-teeth-selector";
 
 const selectedTeeth = ref({
-  'tooth-11': true,
-})
+  "tooth-11": true,
+});
 
 const handleTeethChange = (map, info) => {
+  // Toggle selection on click
   if (!info.isSelected) {
-    selectedTeeth.value = { ...map, [info.id]: true }
+    selectedTeeth.value = { ...map, [info.id]: true };
   } else {
-    selectedTeeth.value = { ...map, [info.id]: false }
+    selectedTeeth.value = { ...map, [info.id]: false };
   }
-}
+};
 </script>
 
 <template>
-  <TeethDiagram
-    :selectedTeeth="selectedTeeth"
-    @change="handleTeethChange"
-  />
+  <TeethDiagram :selectedTeeth="selectedTeeth" @change="handleTeethChange" />
 </template>
 ```
 
 ## Props
 
-| Prop            | Type           | Default  | Description            |
-| --------------- | -------------- | -------- | ---------------------- |
-| selectedTeeth   | `{[id]: true}` | —        | Controlled mode        |
-| defaultSelected | `{[id]: true}` | `{}`     | Initial selected teeth |
-| onChange        | function       | —        | Tooth click callback   |
-| width           | number/string  | `350`    | Component width        |
-| height          | number/string  | `"auto"` | Component height       |
+| Prop                   | Type               | Default  | Description            |
+| ---------------------- | ------------------ | -------- | ---------------------- |
+| `selectedTeeth`        | `{[id]: true}`     | —        | Controlled mode        |
+| `defaultSelected`      | `{[id]: true}`     | `{}`     | Initial selected teeth |
+| `onChange` / `@change` | `function`         | —        | Tooth click callback   |
+| `width`                | `number \| string` | `350`    | Component width        |
+| `height`               | `number \| string` | `"auto"` | Component height       |
 
-## Event
+## @Change Event
 
-The `@change` event provides:
+Emitted when a tooth is clicked. Provides:
 
-- `map` - Current selection map `{[toothId]: true}`
-- `info` - Click info object containing:
-  - `id` - Tooth ID (e.g., "tooth-11")
-  - `number` - Original tooth number (e.g., "11")
-  - `isSelected` - Whether tooth was selected before click
-  - `event` - Original mouse event
-  - `position` - {x, y} position relative to SVG
+```typescript
+{
+  id: string        // Tooth ID (e.g., "tooth-11")
+  number: string    // Tooth number (e.g., "11")
+  isSelected: boolean  // Was selected before click
+  event: MouseEvent    // Original click event
+  position: { x: number, y: number }  // Popup position
+}
+```
 
 ## Local Development
 
@@ -81,12 +81,17 @@ npm install
 npm run dev
 ```
 
-## Build library
+## Build for Production
 
 ```bash
 npm run build
 ```
 
+Outputs to `dist/`:
+
+- `vue-teeth-selector.js` — ES module
+- `vue-teeth-selector.umd.cjs` — UMD/CommonJS
+
 ## Contributing
 
-PRs, issues, and suggestions are welcome!
+Issues and pull requests are welcome!
