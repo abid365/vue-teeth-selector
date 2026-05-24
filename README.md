@@ -24,6 +24,12 @@ npm install vue-teeth-selector
 yarn add vue-teeth-selector
 ```
 
+
+
+https://github.com/user-attachments/assets/c723e6a4-ac45-422a-a8c3-316786849bcd
+
+
+
 ## Quick Start
 
 ```vue
