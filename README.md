@@ -25,8 +25,8 @@ yarn add vue-teeth-selector
 ```
 
 
+<img width="472" height="624" alt="teeth-selector-demo-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/31a1d505-42fd-4983-8e7d-2d5b5f65a890" />
 
-https://github.com/user-attachments/assets/c723e6a4-ac45-422a-a8c3-316786849bcd
 
 
 
