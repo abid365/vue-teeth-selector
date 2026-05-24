@@ -1,0 +1,11 @@
+src/
+public/
+*.log
+vite.config.ts
+tsconfig*.json
+*.vue
+!src/lib/*.vue
+App.vue
+main.ts
+style.css
+plans/

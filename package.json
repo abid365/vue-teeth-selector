@@ -1,0 +1,60 @@
+{
+  "name": "vue-teeth-selector",
+  "description": "A Vue 3 dental teeth selector and odontogram component for dental charts. Easy tooth selection and visualization.",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": ">=3.2.25"
+  },
+  "peerDependencies": {
+    "vue": ">=3.2.25"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.3",
+    "@vitejs/plugin-vue": "^6.0.6",
+    "@vue/tsconfig": "^0.9.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.12",
+    "vue-tsc": "^3.2.8"
+  },
+  "main": "dist/vue-teeth-selector.umd.js",
+  "module": "dist/vue-teeth-selector.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/traval27/vue-teeth-selector.git"
+  },
+  "homepage": "https://github.com/traval27/vue-teeth-selector#readme",
+  "bugs": {
+    "url": "https://github.com/traval27/vue-teeth-selector/issues"
+  },
+  "keywords": [
+    "odontogram",
+    "vue",
+    "vue-component",
+    "dental",
+    "teeth",
+    "tooth",
+    "odontogram",
+    "dental-chart",
+    "dental-selector",
+    "teeth-selector",
+    "tooth-chart",
+    "dentistry",
+    "medical",
+    "healthcare",
+    "ui-component",
+    "vue-ui",
+    "vue-teeth-selector"
+  ]
+}
