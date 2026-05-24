@@ -32,11 +32,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/traval27/vue-teeth-selector.git"
+    "url": "https://github.com/abid365/vue-teeth-selector.git"
   },
-  "homepage": "https://github.com/traval27/vue-teeth-selector#readme",
+  "homepage": "https://github.com/abid365/vue-teeth-selector#readme",
   "bugs": {
-    "url": "https://github.com/traval27/vue-teeth-selector/issues"
+    "url": "https://github.com/abid365/vue-teeth-selector/issues"
   },
   "keywords": [
     "odontogram",
